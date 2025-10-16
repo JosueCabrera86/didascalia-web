@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { FormattedMessage } from 'react-intl';
+import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 function Contacto() {
-
     const heroVariants = {
         hidden: { opacity: 0, scale: 0.95 },
         visible: {
@@ -22,6 +23,7 @@ function Contacto() {
     });
 
     const [errors, setErrors] = useState({});
+    const recaptchaRef = useRef(null);
 
     const handleChange = (e) => {
         setFormData({
@@ -48,10 +50,19 @@ function Contacto() {
         }
 
         setErrors({});
+        // Ejecutar reCAPTCHA invisible
+        recaptchaRef.current.execute();
+    };
 
-        const serviceID = 'service_pevmvcq';
-        const templateID = 'template_8snys1c';
-        const publicKey = '_iSrpBHpITtiNXgM4';
+    const onCaptchaChange = (token) => {
+        if (!token) {
+            alert('Por favor completa el captcha.');
+            return;
+        }
+
+        const serviceID = 'service_y6eoolv';
+        const templateID = 'template_1ytkeyr';
+        const publicKey = 'qL75WhJuzJlzdhXG1';
 
         const templateParams = {
             from_name: formData.nombre,
@@ -64,6 +75,7 @@ function Contacto() {
             .then(() => {
                 alert('Mensaje enviado con éxito.');
                 setFormData({ nombre: '', email: '', asunto: '', mensaje: '' });
+                recaptchaRef.current.reset();
             })
             .catch((error) => {
                 console.error('Error al enviar mensaje:', error);
@@ -188,6 +200,14 @@ function Contacto() {
                             />
                             {errors.mensaje && <span className="text-primario text-sm mt-1">{errors.mensaje}</span>}
                         </label>
+
+                        {/* reCAPTCHA Invisible */}
+                        <ReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey="qL75WhJuzJlzdhXG1"
+                            size="invisible"
+                            onChange={onCaptchaChange}
+                        />
 
                         <button
                             type="submit"
