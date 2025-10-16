@@ -1,0 +1,185 @@
+{
+    "navbar": {
+        "home": "Home",
+        "servicios": "Services",
+        "contacto": "Contact"
+    },
+    "home": {
+        "titulo": "Web Development",
+        "sub": "Your ideas: a new digital story begins",
+        "servicios": "Get the digital boost your project needs",
+        "sersub": "Tailored design and development — secure and efficient",
+        "buttons": "Services",
+        "agenda": "Don't hesitate any longer, schedule a meeting and let's get started on your project.",
+        "button": "Contact us"
+    },
+    "porQueWeb": {
+        "titulo": "Why is it worth having a website?",
+        "beneficios": [
+            {
+                "titulo": "Available 24/7",
+                "texto": "Your website works for you all day, allowing customers to find and learn about you anytime."
+            },
+            {
+                "titulo": "Build trust",
+                "texto": "A website shows professionalism and credibility, presenting your project or brand with a solid image."
+            },
+            {
+                "titulo": "Full control",
+                "texto": "Decide how you’re seen: express your style, values, and what makes you unique."
+            },
+            {
+                "titulo": "Reach more people",
+                "texto": "Boost your Google visibility and attract new potential clients."
+            },
+            {
+                "titulo": "Unlimited reach",
+                "texto": "Break geographic barriers: reach new clients and markets beyond your local area. Receive direct inquiries."
+            },
+            {
+                "titulo": "Showcase your work",
+                "texto": "Your portfolio or services, always accessible and attractively presented."
+            }
+        ],
+        "mensajeFinal": "Having a website is investing in your digital presence — a tool that works for you, even when you’re not there."
+    },
+    "portafolio": {
+        "titulo": "What my clients say",
+        "testimonios": [
+            {
+                "id": 1
+            },
+            {
+                "id": 2
+            },
+            {
+                "id": 3
+            },
+            {
+                "id": 4
+            },
+            {
+                "id": 5
+            }
+        ]
+    },
+    "portafolio.testimonio1.nombre": "Diego Díaz Green",
+    "portafolio.testimonio1.comentario": "I highly recommend them. The team is reliable, dedicated, and very professional. From the beginning, they took the time to understand exactly what I wanted for my website and brought that vision to life — both in functionality and design. They also provided great suggestions and were open to revisions. I’m thrilled with my site!",
+    "portafolio.testimonio1.empresa": "Amplia Conciencia",
+    "portafolio.testimonio1.imagen": "/imgs/portafolio/diego.jpg",
+    "portafolio.testimonio2.nombre": "Ilona Putz",
+    "portafolio.testimonio2.comentario": "I’m very grateful for the excellent work on my website. Thanks to their knowledge and patience, we refined every detail until it was perfect. Their support was key to making my project exactly as I imagined. Totally recommended!",
+    "portafolio.testimonio2.empresa": "Mexikool Tours",
+    "portafolio.testimonio2.imagen": "/imgs/portafolio/ilona.jpg",
+    "portafolio.testimonio3.nombre": "Eugenia de Combi",
+    "portafolio.testimonio3.comentario": "The work on the artistic collective’s website I belong to helped me organize my materials and offer my students an added resource — accessible, clear, and in one place. It was a detailed and passionate effort with great communication and dedication.",
+    "portafolio.testimonio3.empresa": "Colectivo Cultural Los de Allá",
+    "portafolio.testimonio3.imagen": "/imgs/portafolio/euge.jpg",
+    "portafolio.testimonio4.nombre": "Diego Salazar",
+    "portafolio.testimonio4.comentario": "I wholeheartedly recommend DidascaliaDev. They are creative, quick, and incredibly professional. They don’t just build websites—they develop smart strategies, research competitors, and help you stand out. Truly a full-service offering with high quality.",
+    "portafolio.testimonio4.empresa": "Mezcal 13 deNERO",
+    "portafolio.testimonio4.imagen": "/imgs/portafolio/diegoA.jpg",
+    "portafolio.testimonio5.nombre": "Jimena",
+    "portafolio.testimonio5.comentario": "As a psychologist, I was looking for a website that would reflect the essence of my work and connect with people authentically. They perfectly understood my vision: researched my market, proposed creative ideas, and handled every detail with exceptional care. Their speed, professionalism, and human-centered approach make working with them a unique experience. I wholeheartedly recommend them to anyone looking for a distinctive, functional, and purpose-driven website.",
+    "portafolio.testimonio5.empresa": "Psychotherapy and Narrative",
+    "portafolio.testimonio5.imagen": "/imgs/portafolio/jimena.jpg",
+    "servicios": {
+        "hero": {
+            "titulo": "Our Services"
+        },
+        "cards": {
+            "titulo": "What we can do for you",
+            "descripcion": "We offer solutions to boost your online project.",
+            "items": [
+                {
+                    "titulo": "Custom Web Development",
+                    "descripcion": "We create personalized websites tailored to your needs and business goals."
+                },
+                {
+                    "titulo": "E-commerce",
+                    "descripcion": "We build secure, scalable online stores optimized to increase your sales."
+                },
+                {
+                    "titulo": "Website Maintenance",
+                    "descripcion": "We make sure your site stays up-to-date, fast, and secure at all times."
+                },
+                {
+                    "titulo": "Brand Identity Design",
+                    "descripcion": "We collaborate with designers to help create your logo and strengthen your brand identity."
+                }
+            ]
+        },
+        "proceso": {
+            "titulo": "How do i get my website?",
+            "subtitulo": "Follow these simple steps:",
+            "pasos": [
+                "Schedule a meeting to tell me about your needs so we can plan what works best for you.",
+                "Before our meeting day, fill out the form found in the contact section so we can prepare too and make the most of our time together. Write down all your questions and bring them up during our session — don’t hesitate to ask!",
+                "After the meeting, we’ll send you a quote and an agreement form. If you agree, simply sign it and send it back to us.",
+                "Along with the signed agreement, a 50% deposit is required to start the project. The remaining 50% is due before the website goes live."
+            ]
+        },
+        "faq": {
+            "titulo": "Frequently asked questions",
+            "subtitulo": "We answer the most common questions from our clients.",
+            "preguntas": [
+                {
+                    "pregunta": "What types of websites do you develop?",
+                    "respuesta": "We develop corporate websites, e-commerce platforms, landing pages, and any custom web solution tailored to your needs."
+                },
+                {
+                    "pregunta": "Are your websites responsive and mobile-friendly?",
+                    "respuesta": "Yes, all our websites adapt perfectly to mobile devices and tablets, ensuring a smooth experience for every user."
+                },
+                {
+                    "pregunta": "Is a landing page the same as a website?",
+                    "respuesta": "No, a landing page is not the same as a full website. A landing page is a single, goal-oriented page (e.g., to capture emails or sell a product), while a website is a set of interconnected pages with multiple sections (Home, Services, Blog, Contact, etc.)."
+                },
+                {
+                    "pregunta": "What’s the difference between Domain and Hosting?",
+                    "respuesta": "The main difference lies in their purpose: the domain is your website’s identity (address), while hosting is the physical space where your files are stored. Both are essential for your site to be available online. Their cost is included in our quotes."
+                },
+                {
+                    "pregunta": "What platforms or technologies do you use?",
+                    "respuesta": "We work mainly with React and Node.js, but we also take on projects built with WordPress."
+                },
+                {
+                    "pregunta": "Do you also design brand identity or only websites?",
+                    "respuesta": "We collaborate with designers to create your logo, color palette, and strengthen your brand identity alongside the web development process."
+                },
+                {
+                    "pregunta": "Do you offer maintenance and updates after the website is launched?",
+                    "respuesta": "Yes, we offer maintenance plans to keep your website updated, secure, and optimized at all times."
+                },
+                {
+                    "pregunta": "How long does it take to build a website on average?",
+                    "respuesta": "Depending on complexity, a website can take between 2 and 8 weeks from planning to launch."
+                },
+                {
+                    "pregunta": "Do I need to have all my content (text and images) ready before starting?",
+                    "respuesta": "It depends on the project — ideally, you should have what you consider essential for your site. The more material you can provide, the better."
+                },
+                {
+                    "pregunta": "Do you offer photography or video sessions for the website?",
+                    "respuesta": "No. If you need a specific photoshoot or video session for your site, it must be arranged by the client."
+                }
+            ]
+        }
+    },
+    "contacto": {
+        "titulo": "Tell me about your project",
+        "parrafo1": "Every great website starts with a good conversation.",
+        "parrafo2": "Fill out the form and tell me a bit about what you'd like to achieve — project type, goals, or ideas you already have.",
+        "parrafo3": "This helps us understand your needs and prepare a clear, useful, and tailored proposal.",
+        "parrafo4": "We work closely, transparently, and focused on results that truly make an impact.",
+        "boton": "Complete the full form",
+        "nombre": "Name",
+        "email": "E-mail",
+        "asunto": "Subject",
+        "mens": "Message",
+        "enviar": "Send"
+    },
+    "footer": {
+        "copy": "All rights reserved."
+    }
+}

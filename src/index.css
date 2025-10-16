@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+body {
+    overflow-x: hidden;
+    background-color: #000000;
+}
+
+:root {
+    --color-texto: #D6DAE3;
+    --color-primario: #0066cc;
+    --color-secundario: #0db4ef;
+    --color-acento: #A9B2D3;
+    --color-borde-suave: #1a1f2e;
+}
+
+@layer utilities {
+
+    /* ---------------- Textos ---------------- */
+    .text-texto {
+        color: var(--color-texto);
+    }
+
+    .text-primario {
+        color: var(--color-primario);
+    }
+
+    .text-secundario {
+        color: var(--color-secundario);
+    }
+
+    .text-acento {
+        color: var(--color-acento);
+    }
+
+    /* ---------------- Fondos ---------------- */
+    .bg-fondo {
+        background-color: #000000;
+        /* se define explícitamente el fondo negro sólido */
+    }
+
+    .bg-primario {
+        background-color: var(--color-primario);
+    }
+
+    .bg-secundario {
+        background-color: var(--color-secundario);
+    }
+
+    .bg-acento {
+        background-color: var(--color-acento);
+    }
+
+    /* ---------------- Gradientes ---------------- */
+    .bg-gradient-primario {
+        background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+    }
+
+    .bg-gradient-secundario {
+        background: linear-gradient(135deg, var(--color-secundario), var(--color-primario));
+    }
+
+    /* 🌌 Fondo radial oscuro personalizado */
+    .bg-radial-dark {
+        background:
+            radial-gradient(circle at 20% 80%, rgba(0, 102, 204, 0.08), transparent 60%),
+            radial-gradient(circle at 80% 20%, rgba(16, 133, 176, 0.08), transparent 60%);
+    }
+
+    /* 🌑 Versión más visible para contraste */
+    .bg-radial-dark-strong {
+        background:
+            radial-gradient(circle at 40% 60%, rgba(13, 104, 195, 0.15), transparent 10%),
+            radial-gradient(circle at 60% 40%, rgba(14, 147, 196, 0.15), transparent 20%);
+    }
+
+    /* ---------------- Bordes ---------------- */
+    .border-acento {
+        border-color: var(--color-acento);
+    }
+
+    .border-primario {
+        border: 2px solid var(--color-primario);
+    }
+
+    .border-secundario {
+        border: 2px solid var(--color-secundario);
+    }
+
+    .border-suave {
+        border: 1px solid var(--color-borde-suave);
+    }
+
+    /* ---------------- Bordes redondeados ---------------- */
+    .rounded-primario {
+        border-radius: 1rem;
+    }
+
+    .rounded-secundario {
+        border-radius: 0.5rem;
+    }
+}
+
+
+
+
+
+@font-face {
+    font-family: "Righteous";
+    src: url("/fonts/Righteous-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/inter/Inter_18pt-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("/fonts/inter/Merriweather_24pt-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: Regular;
+}
+
+
+.righteous {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+.merri {
+    font-family: sans-serif;
+    font-weight: 400;
+}
