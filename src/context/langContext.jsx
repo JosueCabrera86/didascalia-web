@@ -4,7 +4,7 @@ import { flattenMessages } from '../i18n';
 import MensajesEspañol from '../lang/ES-MX.json';
 import MensajesEnglish from '../lang/en-US.json';
 
-// Flatten messages
+
 const flatMensajesEs = flattenMessages(MensajesEspañol);
 const flatMensajesEn = flattenMessages(MensajesEnglish);
 

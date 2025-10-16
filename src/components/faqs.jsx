@@ -1,7 +1,7 @@
 import React, { useState, useContext, memo } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
-import { langContext } from "../context/LangContext";
+import { LangContext } from "../context/LangContext";
 import { FormattedMessage } from "react-intl";
 
 const FAQItem = memo(({ index, active, onToggle }) => {
@@ -14,7 +14,7 @@ const FAQItem = memo(({ index, active, onToggle }) => {
                        rounded-2xl shadow-md hover:shadow-lg hover:shadow-cyan-400/25 
                        transition-all duration-300 
                        max-w-3xl mx-auto
-                       py-2 sm:py-3" // padding vertical reducido
+                       py-2 sm:py-3"
         >
             <motion.button
                 className="w-full flex items-center justify-between px-4 sm:px-5 text-left inter text-secundario font-semibold focus:outline-none"
@@ -56,7 +56,7 @@ const FAQItem = memo(({ index, active, onToggle }) => {
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
-    const { locale } = useContext(langContext);
+    const { locale } = useContext(LangContext);
     const totalFaqs = 10;
 
     const toggle = (index) => {

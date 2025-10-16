@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaGlobe } from "react-icons/fa";
-import { langContext } from "../context/LangContext";
+import { LangContext } from "../context/LangContext";
 import { FormattedMessage } from "react-intl";
 
 function Navbar() {
-    const { establecerLenguaje, locale } = useContext(langContext);
+    const { changeLanguage, locale } = useContext(LangContext);
+
     const idiomaSiguiente = locale === "es" ? "en" : "es";
-    const toggleIdioma = () => establecerLenguaje(idiomaSiguiente);
+
+    const toggleIdioma = () => {
+        changeLanguage(idiomaSiguiente);
+    };
 
     const [isOpen, setIsOpen] = useState(false);
 

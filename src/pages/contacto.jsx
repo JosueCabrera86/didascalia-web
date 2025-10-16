@@ -213,7 +213,7 @@ function Contacto() {
                             type="submit"
                             className="bg-acento/90 merri hover:bg-acento text-secundario font-semibold px-6 py-3 rounded-md hover:scale-105 transition-transform"
                         >
-                            <FormattedMessage id="boton.enviar" defaultMessage="Enviar" />
+                            <FormattedMessage id="contacto.enviar" defaultMessage="Enviar" />
                         </button>
                     </form>
                 </div>
