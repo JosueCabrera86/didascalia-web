@@ -4,53 +4,45 @@ import { flattenMessages } from '../i18n';
 import MensajesEspañol from '../lang/ES-MX.json';
 import MensajesEnglish from '../lang/en-US.json';
 
-
-const flatMensajesEn = flattenMessages(MensajesEnglish);
+// Flatten messages
 const flatMensajesEs = flattenMessages(MensajesEspañol);
-
+const flatMensajesEn = flattenMessages(MensajesEnglish);
 
 const allMessages = {
-    'es': flatMensajesEs,
-    'en': flatMensajesEn,
+    es: flatMensajesEs,
+    en: flatMensajesEn,
 };
 
 
-export const langContext = createContext();
+export const LangContext = createContext();
 
 
-export const useLanguage = () => useContext(langContext);
-
+export const useLanguage = () => useContext(LangContext);
 
 export const LangProvider = ({ children }) => {
+    const [locale, setLocale] = useState('es');
 
-    const [locale, establecerLocale] = useState('es');
-
-
-    const establecerLenguaje = (newLocale) => {
-
+    const changeLanguage = (newLocale) => {
         if (allMessages[newLocale]) {
-            establecerLocale(newLocale);
+            setLocale(newLocale);
         } else {
-
             console.error(`Error de lenguaje: El idioma '${newLocale}' no está configurado.`);
         }
     };
 
-
-    const contextValue = useMemo(() => ({
-        locale,
-        establecerLenguaje,
-    }), [locale]);
+    const contextValue = useMemo(
+        () => ({
+            locale,
+            changeLanguage,
+        }),
+        [locale]
+    );
 
     return (
-        <langContext.Provider value={contextValue}>
-            <IntlProvider
-                locale={locale}
-                messages={allMessages[locale]}
-                defaultLocale="es"
-            >
+        <LangContext.Provider value={contextValue}>
+            <IntlProvider locale={locale} messages={allMessages[locale]} defaultLocale="es">
                 {children}
             </IntlProvider>
-        </langContext.Provider>
+        </LangContext.Provider>
     );
 };

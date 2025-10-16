@@ -1,7 +1,7 @@
 import React, { useState, useContext, memo } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
-import { langContext } from "../context/langContext";
+import { langContext } from "../context/LangContext";
 import { FormattedMessage } from "react-intl";
 
 const FAQItem = memo(({ index, active, onToggle }) => {

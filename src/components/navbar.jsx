@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaGlobe } from "react-icons/fa";
-import { langContext } from "../context/langcontext";
+import { langContext } from "../context/LangContext";
 import { FormattedMessage } from "react-intl";
 
 function Navbar() {
