@@ -1,18 +1,13 @@
 import { motion } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-
 function Contacto() {
     const heroVariants = {
         hidden: { opacity: 0, scale: 0.95 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: { duration: 1, ease: [0.22, 1, 0.36, 1] }
-        }
+        visible: { opacity: 1, scale: 1, transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } }
     };
 
     const [formData, setFormData] = useState({
@@ -23,13 +18,11 @@ function Contacto() {
     });
 
     const [errors, setErrors] = useState({});
+    const [status, setStatus] = useState(""); // '', 'success', 'error'
     const recaptchaRef = useRef(null);
 
     const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const validateForm = () => {
@@ -48,15 +41,13 @@ function Contacto() {
             setErrors(newErrors);
             return;
         }
-
         setErrors({});
-        // Ejecutar reCAPTCHA invisible
         recaptchaRef.current.execute();
     };
 
     const onCaptchaChange = (token) => {
         if (!token) {
-            alert('Por favor completa el captcha.');
+            setStatus("error");
             return;
         }
 
@@ -73,20 +64,27 @@ function Contacto() {
 
         emailjs.send(serviceID, templateID, templateParams, publicKey)
             .then(() => {
-                alert('Mensaje enviado con éxito.');
+                setStatus("success");
                 setFormData({ nombre: '', email: '', asunto: '', mensaje: '' });
                 recaptchaRef.current.reset();
             })
             .catch((error) => {
                 console.error('Error al enviar mensaje:', error);
-                alert('Error al enviar el mensaje. Intenta de nuevo.');
+                setStatus("error");
             });
     };
 
+    useEffect(() => {
+        if (status) {
+            const timer = setTimeout(() => setStatus(""), 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [status]);
+
     return (
-        <div className='bg-radial-dark'>
+        <div className="bg-radial-dark overflow-x-hidden">
             <motion.section
-                className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-black"
+                className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
                 initial="hidden"
                 animate="visible"
                 variants={heroVariants}
@@ -107,16 +105,15 @@ function Contacto() {
                 </div>
             </motion.section>
 
-            {/* Contenido */}
             <div className="relative container mx-auto mt-8 pb-12 px-4 sm:px-6 lg:px-16">
                 <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start justify-between">
 
                     {/* Texto */}
                     <div className="lg:w-1/2 text-center lg:text-left">
-                        <h2 className="text-3xl  sm:text-4xl md:text-5xl righteous font-bold mb-6 text-acento uppercase tracking-wide">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl righteous font-bold mb-6 text-acento uppercase tracking-wide">
                             <FormattedMessage id="contacto.titulo" defaultMessage="Cuéntame sobre tu proyecto" />
                         </h2>
-                        <div className="text-acento  rounded-xl inter text-base sm:text-lg leading-relaxed space-y-4 max-w-lg mx-auto lg:mx-0">
+                        <div className="text-acento rounded-xl inter text-base sm:text-lg leading-relaxed space-y-4 max-w-lg mx-auto lg:mx-0">
                             <p><FormattedMessage id="contacto.parrafo1" defaultMessage="Cada buen sitio web comienza con una buena conversación." /></p>
                             <p><FormattedMessage id="contacto.parrafo2" defaultMessage="Completa el formulario y cuéntanos un poco sobre lo que quieres lograr: tipo de proyecto, objetivos o ideas que ya tengas." /></p>
                             <p><FormattedMessage id="contacto.parrafo3" defaultMessage="Esto nos permite entender mejor tus necesidades y prepararme para ofrecerte una propuesta clara, útil y hecha a tu medida." /></p>
@@ -137,10 +134,9 @@ function Contacto() {
                     {/* Formulario */}
                     <form
                         onSubmit={handleSubmit}
-                        className="lg:w-1/2 flex flex-col space-y-4 sm:space-y-5 text-base text-primario max-w-lg mx-auto lg:mx-0
-                                   bg-[#0b0e18]/40 p-5 sm:p-6 rounded-2xl border border-acento backdrop-blur-sm transition-all duration-300"
+                        className="lg:w-1/2 max-w-full sm:max-w-lg mx-auto flex flex-col space-y-4 sm:space-y-5 text-base text-primario bg-[#0b0e18]/40 p-5 sm:p-6 rounded-2xl border border-acento backdrop-blur-sm transition-all duration-300"
                     >
-                        {/** Nombre */}
+                        {/* Nombre */}
                         <label className="flex flex-col">
                             <span className="text-secundario">
                                 <FormattedMessage id="contacto.nombre" defaultMessage="Nombre" />
@@ -155,7 +151,7 @@ function Contacto() {
                             {errors.nombre && <span className="text-primario text-sm mt-1">{errors.nombre}</span>}
                         </label>
 
-                        {/** Email */}
+                        {/* Email */}
                         <label className="flex flex-col">
                             <span className="text-secundario">
                                 <FormattedMessage id="contacto.email" defaultMessage="E-mail" />
@@ -170,7 +166,7 @@ function Contacto() {
                             {errors.email && <span className="text-primario text-sm mt-1">{errors.email}</span>}
                         </label>
 
-                        {/** Asunto */}
+                        {/* Asunto */}
                         <label className="flex flex-col">
                             <span className="text-secundario">
                                 <FormattedMessage id="contacto.asunto" defaultMessage="Asunto" />
@@ -185,7 +181,7 @@ function Contacto() {
                             {errors.asunto && <span className="text-primario text-sm mt-1">{errors.asunto}</span>}
                         </label>
 
-                        {/** Mensaje */}
+                        {/* Mensaje */}
                         <label className="flex flex-col">
                             <span className="text-secundario">
                                 <FormattedMessage id="contacto.mens" defaultMessage="Mensaje" />
@@ -214,6 +210,18 @@ function Contacto() {
                         >
                             <FormattedMessage id="contacto.enviar" defaultMessage="Enviar" />
                         </button>
+
+                        {/* Mensajes de estado */}
+                        {status === "success" && (
+                            <p className="text-green-500 mt-2 text-center font-semibold">
+                                Mensaje enviado con éxito
+                            </p>
+                        )}
+                        {status === "error" && (
+                            <p className="text-red-500 mt-2 text-center font-semibold">
+                                Ocurrió un error, intenta de nuevo
+                            </p>
+                        )}
                     </form>
                 </div>
             </div>
