@@ -35,7 +35,9 @@ const Home = () => {
                         className="text-4xl sm:text-5xl md:text-7xl righteous font-bold mb-4 sm:mb-6 text-primario tracking-wide uppercase drop-shadow-lg"
                         variants={heroVariants}
                     >
-                        <FormattedMessage id='home.titulo' defaultMessage="Desarrollo Web" />
+                        <FormattedMessage id='home.titulo' defaultMessage="DidascaliaDev" />
+                        <br />
+                        <FormattedMessage id='home.subt' defaultMessage="Desarrollo Web" />
                     </motion.h1>
 
                     <motion.p

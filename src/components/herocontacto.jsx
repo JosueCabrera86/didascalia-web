@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { BsWhatsapp, BsEnvelope } from "react-icons/bs";
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
 
 const HeroContacto = () => {
   const [hoveredCircle, setHoveredCircle] = useState(false);
@@ -12,11 +13,10 @@ const HeroContacto = () => {
     { icon: <BsEnvelope size={20} />, initialAngle: 180, href: "/contacto" },
   ];
 
-  // Radio adaptativo según tamaño de pantalla
   const getRadius = () => {
-    if (window.innerWidth < 640) return 60;   // móvil
-    if (window.innerWidth < 1024) return 90;  // tablet
-    return 110;                               // escritorio
+    if (window.innerWidth < 640) return 60;
+    if (window.innerWidth < 1024) return 90;
+    return 110;
   };
 
   const orbitDuration = 50;
@@ -28,7 +28,7 @@ const HeroContacto = () => {
       animate="rest"
       whileHover="hover"
     >
-      {/* Texto centrado */}
+      {/* Texto */}
       <div className="flex flex-col justify-center items-center text-center z-10 px-2 sm:px-4">
         <h1 className="text-2xl sm:text-3xl md:text-4xl inter font-bold mb-6 text-acento tracking-wide uppercase drop-shadow-lg">
           <FormattedMessage
@@ -38,7 +38,7 @@ const HeroContacto = () => {
         </h1>
       </div>
 
-      {/* Círculo y iconos */}
+      {/* Círculo con iconos */}
       <div className="flex justify-center items-center relative mt-10 md:mt-0">
         <motion.div
           className="relative rounded-full bg-cyan-600/20 flex items-center justify-center cursor-pointer shadow-lg"
@@ -82,6 +82,8 @@ const HeroContacto = () => {
               controls.stop();
             }
 
+            const isExternal = item.href.startsWith("http");
+
             return (
               <motion.div
                 key={i}
@@ -94,16 +96,7 @@ const HeroContacto = () => {
                 animate={controls}
                 initial={{ rotate: item.initialAngle }}
               >
-                <motion.a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    top: 0,
-                    transform: "translate(-50%, -50%)",
-                  }}
+                <motion.div
                   initial={{ x: 0, scale: 0, opacity: 0 }}
                   animate={
                     hoveredCircle
@@ -121,8 +114,24 @@ const HeroContacto = () => {
                   onMouseEnter={() => setPauseOrbit(true)}
                   onMouseLeave={() => setPauseOrbit(false)}
                 >
-                  {item.icon}
-                </motion.a>
+                  {isExternal ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full h-full"
+                    >
+                      {item.icon}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="flex items-center justify-center w-full h-full"
+                    >
+                      {item.icon}
+                    </Link>
+                  )}
+                </motion.div>
               </motion.div>
             );
           })}

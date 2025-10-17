@@ -38,9 +38,9 @@ function Navbar() {
 
                 <div>
                     <img
-                        src="/imgs/navbar/logo.png"
+                        src="/imgs/navbar/1.png"
                         alt="logo"
-                        className="w-26 h-auto transition-transform duration-500 hover:scale-105"
+                        className="w-32 h-auto transition-transform duration-500 hover:scale-105"
                     />
                 </div>
 

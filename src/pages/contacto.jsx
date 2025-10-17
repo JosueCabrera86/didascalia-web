@@ -97,7 +97,7 @@ function Contacto() {
                     alt="portada"
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
                 />
-                <div className="absolute inset-0 bg-black/70 z-10"></div>
+                <div className="absolute inset-0 bg-black/50 z-10"></div>
 
                 <div className="relative z-20 text-center px-6 sm:px-12">
                     <motion.h1

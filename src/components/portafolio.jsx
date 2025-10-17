@@ -19,7 +19,7 @@ const Portafolio = () => {
     animate: {
       x: ["0%", "-50%"],
       transition: {
-        x: { repeat: Infinity, repeatType: "loop", duration: 140, ease: "linear" },
+        x: { repeat: Infinity, repeatType: "loop", duration: 100, ease: "linear" },
       },
     },
   };
@@ -37,7 +37,7 @@ const Portafolio = () => {
           <FormattedMessage id="portafolio.titulo" defaultMessage="Lo que dicen nuestros clientes" />
         </motion.h2>
 
-        {/* Testimonios */}
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonios.map((t, i) => {
             const imgSrc = intl.formatMessage({ id: `portafolio.testimonio${t.id}.imagen` });
@@ -78,7 +78,7 @@ const Portafolio = () => {
         </div>
       </div>
 
-      {/* Cintillo de proyectos - ancho completo */}
+
       <div className="w-full bg-black overflow-hidden py-10">
         <motion.div
           className="flex gap-10 w-max min-w-full px-8 md:px-16"
