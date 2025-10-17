@@ -61,7 +61,7 @@ function Contacto() {
         }
 
         const serviceID = 'service_y6eoolv';
-        const templateID = 'template_1ytkeyr';
+        const templateID = 'template_nrpbjw3';
         const publicKey = 'qL75WhJuzJlzdhXG1';
 
         const templateParams = {
@@ -84,8 +84,7 @@ function Contacto() {
     };
 
     return (
-        <div>
-            {/* Hero Section */}
+        <div className='bg-radial-dark'>
             <motion.section
                 className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-black"
                 initial="hidden"
@@ -97,7 +96,7 @@ function Contacto() {
                     alt="portada"
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
                 />
-                <div className="absolute inset-0 bg-black/50 z-10"></div>
+                <div className="absolute inset-0 bg-black/40 z-10"></div>
 
                 <div className="relative z-20 text-center px-6 sm:px-12">
                     <motion.h1
@@ -117,7 +116,7 @@ function Contacto() {
                         <h2 className="text-3xl  sm:text-4xl md:text-5xl righteous font-bold mb-6 text-acento uppercase tracking-wide">
                             <FormattedMessage id="contacto.titulo" defaultMessage="Cuéntame sobre tu proyecto" />
                         </h2>
-                        <div className="text-primario inter text-base sm:text-lg leading-relaxed space-y-4 max-w-lg mx-auto lg:mx-0">
+                        <div className="text-acento  rounded-xl inter text-base sm:text-lg leading-relaxed space-y-4 max-w-lg mx-auto lg:mx-0">
                             <p><FormattedMessage id="contacto.parrafo1" defaultMessage="Cada buen sitio web comienza con una buena conversación." /></p>
                             <p><FormattedMessage id="contacto.parrafo2" defaultMessage="Completa el formulario y cuéntanos un poco sobre lo que quieres lograr: tipo de proyecto, objetivos o ideas que ya tengas." /></p>
                             <p><FormattedMessage id="contacto.parrafo3" defaultMessage="Esto nos permite entender mejor tus necesidades y prepararme para ofrecerte una propuesta clara, útil y hecha a tu medida." /></p>
@@ -139,7 +138,7 @@ function Contacto() {
                     <form
                         onSubmit={handleSubmit}
                         className="lg:w-1/2 flex flex-col space-y-4 sm:space-y-5 text-base text-primario max-w-lg mx-auto lg:mx-0
-                                   bg-[#0b0e18]/40 p-5 sm:p-6 rounded-2xl border border-acento/40 backdrop-blur-sm transition-all duration-300"
+                                   bg-[#0b0e18]/40 p-5 sm:p-6 rounded-2xl border border-acento backdrop-blur-sm transition-all duration-300"
                     >
                         {/** Nombre */}
                         <label className="flex flex-col">
@@ -151,7 +150,7 @@ function Contacto() {
                                 name="nombre"
                                 value={formData.nombre}
                                 onChange={handleChange}
-                                className="border merri border-acento/60 bg-transparent p-2 rounded mt-1 text-primario focus:outline-none focus:ring-2 focus:ring-acento transition"
+                                className="border merri border-acento bg-transparent p-2 rounded mt-1 text-primario focus:outline-none focus:ring-2 focus:ring-acento transition"
                             />
                             {errors.nombre && <span className="text-primario text-sm mt-1">{errors.nombre}</span>}
                         </label>
@@ -166,7 +165,7 @@ function Contacto() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="border merri border-acento/60 bg-transparent p-2 rounded mt-1 text-primario focus:outline-none focus:ring-2 focus:ring-acento transition"
+                                className="border merri border-acento bg-transparent p-2 rounded mt-1 text-primario focus:outline-none focus:ring-2 focus:ring-acento transition"
                             />
                             {errors.email && <span className="text-primario text-sm mt-1">{errors.email}</span>}
                         </label>
@@ -181,7 +180,7 @@ function Contacto() {
                                 name="asunto"
                                 value={formData.asunto}
                                 onChange={handleChange}
-                                className="border merri border-acento/60 bg-transparent p-2 rounded mt-1 text-primario focus:outline-none focus:ring-2 focus:ring-acento transition"
+                                className="border merri border-acento bg-transparent p-2 rounded mt-1 text-primario focus:outline-none focus:ring-2 focus:ring-acento transition"
                             />
                             {errors.asunto && <span className="text-primario text-sm mt-1">{errors.asunto}</span>}
                         </label>
@@ -196,7 +195,7 @@ function Contacto() {
                                 value={formData.mensaje}
                                 onChange={handleChange}
                                 rows={4}
-                                className="border merri border-acento/60 bg-transparent p-2 rounded mt-1 resize-y text-primario focus:outline-none focus:ring-2 focus:ring-acento transition"
+                                className="border merri border-acento bg-transparent p-2 rounded mt-1 resize-y text-primario focus:outline-none focus:ring-2 focus:ring-acento transition"
                             />
                             {errors.mensaje && <span className="text-primario text-sm mt-1">{errors.mensaje}</span>}
                         </label>
@@ -204,14 +203,14 @@ function Contacto() {
                         {/* reCAPTCHA Invisible */}
                         <ReCAPTCHA
                             ref={recaptchaRef}
-                            sitekey="qL75WhJuzJlzdhXG1"
+                            sitekey="6LdnMO0rAAAAABwQ24o43hsMsEDgt8Gd10UTzh5N"
                             size="invisible"
                             onChange={onCaptchaChange}
                         />
 
                         <button
                             type="submit"
-                            className="bg-acento/90 merri hover:bg-acento text-secundario font-semibold px-6 py-3 rounded-md hover:scale-105 transition-transform"
+                            className="bg-primario merri hover:bg-acento text-acento font-semibold px-6 py-3 rounded-md hover:scale-105 transition-transform"
                         >
                             <FormattedMessage id="contacto.enviar" defaultMessage="Enviar" />
                         </button>

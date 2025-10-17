@@ -42,7 +42,7 @@ const Servicios = () => {
 
             <motion.section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black" initial="hidden" animate="visible" variants={heroVariants}>
                 <motion.img src="/imgs/servicios/portada.png" alt="Decoración" style={{ opacity, y }} transition={{ duration: 1 }} className="fixed inset-0 w-full h-screen object-contain sm:object-contain md:object-cover z-[1]" />
-                <div className="absolute inset-0 bg-black/60 z-[3]"></div>
+                <div className="absolute inset-0 bg-black/40 z-[3]"></div>
                 <div className="relative z-10 text-center px-4 sm:px-8 md:px-16">
                     <motion.h1 className="text-6xl sm:text-4xl md:text-6xl righteous font-bold mb-6 text-secundario tracking-wide uppercase drop-shadow-lg">
                         <FormattedMessage id="servicios.hero.titulo" />

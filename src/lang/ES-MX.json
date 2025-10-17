@@ -11,7 +11,7 @@
         "servicios": "Consigue el impulso digital que tu proyecto necesita",
         "sersub": "Diseño y desarrollo a la medida, seguro y eficaz",
         "buttons": "Servicios",
-        "agenda": "No lo dudes más, agenda una reunión y empecemos con tu proyecto",
+        "agenda": "Agenda una reunión y empecemos con tu proyecto",
         "button": "Contáctanos"
     },
     "porQueWeb": {
@@ -177,6 +177,7 @@
         }
     },
     "contacto": {
+        "hero": "Contáctanos",
         "titulo": "Cuéntame sobre tu proyecto",
         "parrafo1": "Cada buen sitio web comienza con una buena conversación.",
         "parrafo2": "Completa el formulario y cuéntanos un poco sobre lo que quieres lograr: tipo de proyecto, objetivos o ideas que ya tengas.",

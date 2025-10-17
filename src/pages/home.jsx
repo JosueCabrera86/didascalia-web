@@ -67,15 +67,17 @@ const Home = () => {
                     </Link>
                 </div>
 
-
-                <div className="relative w-full min-h-screen sm:h-96 md:h-full">
+                <div className="relative w-full md:h-[500px]"> {/* Ajusta la altura solo para desktop */}
                     <img
                         src="/imgs/inicio/1.jpg"
                         alt="Diseño web"
-                        className="absolute top-0 left-0 w-full h-full object-cover md:rounded-l-[0px]"
+                        className="w-full h-auto md:h-full object-cover md:rounded-l-[0px]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
                 </div>
+
+
+
             </section>
 
 

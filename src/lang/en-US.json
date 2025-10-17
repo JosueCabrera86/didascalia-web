@@ -11,7 +11,7 @@
         "servicios": "Get the digital boost your project needs",
         "sersub": "Tailored design and development — secure and efficient",
         "buttons": "Services",
-        "agenda": "Don't hesitate any longer, schedule a meeting and let's get started on your project.",
+        "agenda": "Schedule a meeting and let's get started on your project.",
         "button": "Contact us"
     },
     "porQueWeb": {
@@ -168,6 +168,7 @@
         }
     },
     "contacto": {
+        "hero": "Contact us",
         "titulo": "Tell me about your project",
         "parrafo1": "Every great website starts with a good conversation.",
         "parrafo2": "Fill out the form and tell me a bit about what you'd like to achieve — project type, goals, or ideas you already have.",
