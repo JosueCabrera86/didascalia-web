@@ -37,11 +37,13 @@ function Navbar() {
             <div className="flex justify-between items-center container mx-auto">
 
                 <div>
-                    <img
-                        src="/imgs/navbar/1.png"
-                        alt="logo"
-                        className="w-32 h-auto transition-transform duration-500 hover:scale-105"
-                    />
+                    <Link to="/" onClick={() => setIsOpen(false)}>
+                        <img
+                            src="/imgs/navbar/1.png"
+                            alt="logo"
+                            className="w-32 h-auto transition-transform duration-500 hover:scale-105 cursor-pointer"
+                        />
+                    </Link>
                 </div>
 
 
