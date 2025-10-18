@@ -21,27 +21,45 @@ const Home = () => {
 
 
             <motion.section
-                className="relative w-full h-screen flex items-center justify-center bg-cover bg-center sm:bg-top"
-                style={{ backgroundImage: "url('/imgs/inicio/portada.png')" }}
+                className="relative w-full h-screen flex items-center justify-center overflow-hidden"
                 initial="hidden"
                 animate="visible"
                 variants={heroVariants}
             >
+                {/* Imagen de fondo */}
+                <img
+                    src="/imgs/inicio/portada.png"
+                    alt="Portada"
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+
+                {/* Capa oscura */}
                 <div className="absolute inset-0 bg-black/60"></div>
+
+                {/* Degradado inferior */}
                 <div className="absolute bottom-0 left-0 w-full h-32 sm:h-48 bg-gradient-to-t from-black to-transparent"></div>
 
+                {/* Contenido */}
                 <div className="relative z-10 text-center px-4 sm:px-8 md:px-16">
                     <motion.h1
-                        className="text-4xl sm:text-5xl md:text-7xl righteous font-bold mb-4 sm:mb-6 text-primario tracking-wide uppercase drop-shadow-lg"
+                        className="text-center text-4xl sm:text-5xl md:text-8xl righteous font-bold mb-4 sm:mb-6 text-primario tracking-wide uppercase drop-shadow-lg"
                         variants={heroVariants}
                     >
-                        <FormattedMessage id='home.titulo' defaultMessage="DidascaliaDev" />
+                        <motion.span variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
+                            <FormattedMessage id="home.titulo" defaultMessage="DidascaliaDev" />
+                        </motion.span>
                         <br />
-                        <FormattedMessage id='home.subt' defaultMessage="Desarrollo Web" />
+                        <motion.span
+                            className="text-3xl md:text-6xl font-light text-secundario"
+                            variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            <FormattedMessage id="home.subt" defaultMessage="Desarrollo Web" />
+                        </motion.span>
                     </motion.h1>
 
                     <motion.p
-                        className="text-lg sm:text-2xl md:text-3xl text-secundario inter font-bold tracking-wide drop-shadow-md"
+                        className="text-2xl italic sm:text-3xl md:text-4xl text-secundario inter font-bold tracking-wide drop-shadow-md"
                         variants={heroVariants}
                     >
                         <FormattedMessage id="home.sub" defaultMessage="Tus ideas: una nueva historia digital" />
@@ -53,10 +71,10 @@ const Home = () => {
             <section className="relative w-full grid grid-cols-1 md:grid-cols-2 overflow-hidden mt-10 md:mt-10">
 
                 <div className="flex flex-col items-center justify-center px-4 sm:px-8 md:px-16 py-12 md:py-0 text-center md:text-left z-10">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl inter font-bold mb-4 sm:mb-6 text-acento tracking-wide uppercase drop-shadow-lg">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl inter font-bold mb-4 sm:mb-6 text-acento tracking-wide uppercase drop-shadow-lg">
                         <FormattedMessage id="home.servicios" defaultMessage="Consigue el impulso digital que tu proyecto necesita" />
                     </h1>
-                    <p className="text-lg sm:text-2xl md:text-3xl text-secundario inter font-bold tracking-wide drop-shadow-md">
+                    <p className="text-xl sm:text-3xl md:text-4xl text-secundario inter font-bold tracking-wide drop-shadow-md">
                         <FormattedMessage id='home.sersub' defaultMessage="Diseño y desarrollo a la medida, seguro y eficaz" />
                     </p>
                     <Link
@@ -67,7 +85,7 @@ const Home = () => {
                     </Link>
                 </div>
 
-                <div className="relative w-full md:h-[500px]"> {/* Ajusta la altura solo para desktop */}
+                <div className="relative w-full md:h-[500px]">
                     <img
                         src="/imgs/inicio/1.jpg"
                         alt="Diseño web"
