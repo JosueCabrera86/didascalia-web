@@ -27,7 +27,7 @@ function Navbar() {
             className="fixed top-0 left-0 w-full z-50 p-2 text-secundario transition-all duration-300"
         >
             <div className="flex justify-between items-center container mx-auto">
-
+                {/* LOGO */}
                 <div>
                     <Link to="/" onClick={() => setIsOpen(false)}>
                         <img
@@ -38,7 +38,7 @@ function Navbar() {
                     </Link>
                 </div>
 
-
+                {/* NAV DESKTOP */}
                 <div className="hidden lg:flex flex-col items-center">
                     <ul className="flex gap-6 items-center inter font-bold text-xl mb-2">
                         <li>
@@ -92,58 +92,75 @@ function Navbar() {
                         </span>
                     </button>
 
-                    <button
-                        className="z-50 text-primario"
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        {isOpen ? <X size={28} /> : <Menu size={28} />}
-                    </button>
+                    {/* Solo el menú hamburguesa (sin X) */}
+                    {!isOpen && (
+                        <button
+                            className="z-50 text-primario"
+                            onClick={() => setIsOpen(true)}
+                        >
+                            <Menu size={28} />
+                        </button>
+                    )}
                 </div>
             </div>
 
-
+            {/* OVERLAY oscuro con el menú dentro */}
             <motion.div
-                initial={{ opacity: 0, x: "100%" }}
-                animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : "100%" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isOpen ? 1 : 0 }}
                 transition={{ duration: 0.3 }}
-                className={`fixed top-3 right-3 rounded-2xl bg-black/85 backdrop-blur-md px-6 py-8
-          shadow-[0_8px_25px_rgba(0,0,0,0.6)] z-40 transition-all duration-300 ease-in-out
-          ${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+                className={`fixed inset-0 z-40 transition-opacity duration-300 ${isOpen ? "pointer-events-auto" : "pointer-events-none"
+                    }`}
             >
+                {/* Fondo semitransparente detrás */}
+                <div
+                    className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                    onClick={() => setIsOpen(false)}
+                ></div>
 
-                <div className="flex justify-end mb-4">
-                    <button
-                        className="text-primario hover:text-white transition"
-                        onClick={() => setIsOpen(false)}
-                    >
-                        <X size={26} />
-                    </button>
-                </div>
-
-                <ul className="flex flex-col items-center gap-4 text-primario text-lg font-semibold">
-                    {[
-                        { to: "/", id: "navbar.home", default: "Inicio" },
-                        { to: "/servicios", id: "navbar.servicios", default: "Servicios" },
-                        { to: "/contacto", id: "navbar.contacto", default: "Contacto" },
-                    ].map((item) => (
-                        <motion.li
-                            key={item.id}
-                            whileHover={{
-                                scale: 1.05,
-                                boxShadow: "0 4px 12px rgba(255,255,255,0.2)",
-                            }}
-                            className="w-full text-center py-2 px-4 rounded-xl hover:bg-white/10 transition"
+                {/* Panel del menú */}
+                <motion.div
+                    initial={{ x: "100%" }}
+                    animate={{ x: isOpen ? 0 : "100%" }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute top-3 right-3 w-[85%] max-w-sm rounded-2xl bg-black/85 backdrop-blur-md px-6 py-8 shadow-[0_8px_25px_rgba(0,0,0,0.6)]"
+                >
+                    {/* BOTÓN CERRAR DENTRO */}
+                    <div className="flex justify-end mb-4">
+                        <button
+                            className="text-primario hover:text-white transition"
+                            onClick={() => setIsOpen(false)}
                         >
-                            <Link
-                                to={item.to}
-                                onClick={() => setIsOpen(false)}
-                                className="block w-full"
+                            <X size={26} />
+                        </button>
+                    </div>
+
+                    {/* LINKS */}
+                    <ul className="flex flex-col items-center gap-4 text-primario text-lg font-semibold">
+                        {[
+                            { to: "/", id: "navbar.home", default: "Inicio" },
+                            { to: "/servicios", id: "navbar.servicios", default: "Servicios" },
+                            { to: "/contacto", id: "navbar.contacto", default: "Contacto" },
+                        ].map((item) => (
+                            <motion.li
+                                key={item.id}
+                                whileHover={{
+                                    scale: 1.05,
+                                    boxShadow: "0 4px 12px rgba(255,255,255,0.2)",
+                                }}
+                                className="w-full text-center py-2 px-4 rounded-xl hover:bg-white/10 transition"
                             >
-                                <FormattedMessage id={item.id} defaultMessage={item.default} />
-                            </Link>
-                        </motion.li>
-                    ))}
-                </ul>
+                                <Link
+                                    to={item.to}
+                                    onClick={() => setIsOpen(false)}
+                                    className="block w-full"
+                                >
+                                    <FormattedMessage id={item.id} defaultMessage={item.default} />
+                                </Link>
+                            </motion.li>
+                        ))}
+                    </ul>
+                </motion.div>
             </motion.div>
         </motion.nav>
     );
