@@ -6,20 +6,41 @@ const Portafolio = () => {
   const intl = useIntl();
 
   const proyectos = [
-    { logo: "/imgs/portafolio/alla.png", url: "https://losdealla.com", alt: "Los de Allá" },
+    {
+      logo: "/imgs/portafolio/alla.png",
+      url: "https://losdealla.com",
+      alt: "Los de Allá",
+    },
     { logo: "/imgs/portafolio/13.png", url: "#", alt: "Proyecto 13" },
-    { logo: "/imgs/portafolio/mexikool.png", url: "https://mexikooltours.com", alt: "Mexikool" },
+    {
+      logo: "/imgs/portafolio/mexikool.png",
+      url: "https://mexikooltours.com",
+      alt: "Mexikool",
+    },
     { logo: "/imgs/portafolio/mano1.png", url: "#", alt: "Proyecto Mano" },
-    { logo: "/imgs/portafolio/rb.png", url: "https://ampliaconsciencia.com", alt: "Amplia Conciencia" },
+    {
+      logo: "/imgs/portafolio/rb.png",
+      url: "https://ampliaconsciencia.com",
+      alt: "Amplia Conciencia",
+    },
   ];
 
-  const testimonios = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
-
+  const testimonios = [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 } /*{ id: 4 }, { id: 5 }*/,
+  ];
+  const url = [];
   const marquee = {
     animate: {
       x: ["0%", "-50%"],
       transition: {
-        x: { repeat: Infinity, repeatType: "loop", duration: 100, ease: "linear" },
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 100,
+          ease: "linear",
+        },
       },
     },
   };
@@ -34,13 +55,17 @@ const Portafolio = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <FormattedMessage id="portafolio.titulo" defaultMessage="Lo que dicen nuestros clientes" />
+          <FormattedMessage
+            id="portafolio.titulo"
+            defaultMessage="Lo que dicen nuestros clientes"
+          />
         </motion.h2>
-
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonios.map((t, i) => {
-            const imgSrc = intl.formatMessage({ id: `portafolio.testimonio${t.id}.imagen` });
+            const imgSrc = intl.formatMessage({
+              id: `portafolio.testimonio${t.id}.imagen`,
+            });
             return (
               <motion.div
                 key={i}
@@ -53,21 +78,47 @@ const Portafolio = () => {
 
                 <div className="relative z-10 flex flex-col space-y-4">
                   <p className="text-acento italic text-justify leading-relaxed mb-2">
-                    “<FormattedMessage id={`portafolio.testimonio${t.id}.comentario`} />”
+                    “
+                    <FormattedMessage
+                      id={`portafolio.testimonio${t.id}.comentario`}
+                    />
+                    ”
                   </p>
 
                   <div className="flex items-center gap-4">
                     <img
                       src={imgSrc}
-                      alt={`Foto de ${intl.formatMessage({ id: `portafolio.testimonio${t.id}.nombre` })}`}
+                      alt={`Foto de ${intl.formatMessage({
+                        id: `portafolio.testimonio${t.id}.nombre`,
+                      })}`}
                       className="w-16 h-16 rounded-full object-cover border-2 border-cyan-300 shadow-md"
                     />
                     <div className="flex flex-col">
                       <h4 className="text-primario inter font-semibold">
-                        <FormattedMessage id={`portafolio.testimonio${t.id}.nombre`} />
+                        <FormattedMessage
+                          id={`portafolio.testimonio${t.id}.nombre`}
+                        />
                       </h4>
                       <p className="text-secundario merri text-sm">
-                        <FormattedMessage id={`portafolio.testimonio${t.id}.empresa`} />
+                        <FormattedMessage
+                          id={`portafolio.testimonio${t.id}.empresa`}
+                        />
+                      </p>
+                      <p className="text-secundario merri text-sm">
+                        <p className="text-secundario merri text-sm underline">
+                          <a
+                            href={intl.formatMessage({
+                              id: `portafolio.testimonio${t.id}.url`,
+                            })}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-cyan-300 hover:text-cyan-400"
+                          >
+                            <FormattedMessage
+                              id={`portafolio.testimonio${t.id}.url`}
+                            />
+                          </a>
+                        </p>
                       </p>
                     </div>
                   </div>
@@ -77,7 +128,6 @@ const Portafolio = () => {
           })}
         </div>
       </div>
-
 
       <div className="w-full bg-black overflow-hidden py-10">
         <motion.div

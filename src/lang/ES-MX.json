@@ -1,196 +1,199 @@
 {
-    "navbar": {
-        "home": "Inicio",
-        "servicios": "Servicios",
-        "contacto": "Contacto"
+  "navbar": {
+    "home": "Inicio",
+    "servicios": "Servicios",
+    "contacto": "Contacto"
+  },
+  "home": {
+    "titulo": "Didascalia Dev",
+    "subt": "Desarrollo Web",
+    "sub": "Tus ideas: una nueva historia digital",
+    "servicios": "Consigue el impulso digital que tu proyecto necesita",
+    "sersub": "Diseño y desarrollo a la medida, seguro y eficaz",
+    "buttons": "Servicios",
+    "agenda": "Agenda una reunión y empecemos con tu proyecto",
+    "button": "Contáctanos"
+  },
+  "porQueWeb": {
+    "titulo": "¿Por qué me conviene tener una web?",
+    "beneficios": [
+      {
+        "titulo": "Disponibilidad 24/7",
+        "texto": "Tu sitio web trabaja por ti todo el día, permitiendo que tus clientes te encuentren y se informen en cualquier momento."
+      },
+      {
+        "titulo": "Genera confianza",
+        "texto": "Una web transmite seriedad y credibilidad, mostrando tu proyecto o marca con una imagen sólida y profesional."
+      },
+      {
+        "titulo": "Control total",
+        "texto": "Decide cómo te ven: muestra tu estilo, tus valores y lo que te hace único."
+      },
+      {
+        "titulo": "Atrae más personas",
+        "texto": "Optimiza tu visibilidad en Google y llega a nuevos clientes potenciales."
+      },
+      {
+        "titulo": "Alcance ilimitado",
+        "texto": "Rompe las barreras geográficas: llega a nuevos clientes y mercados más allá de tu entorno local. Recibe consultas directas."
+      },
+      {
+        "titulo": "Muestra tu trabajo",
+        "texto": "Tu portafolio o servicios, siempre accesibles y presentados de forma atractiva."
+      }
+    ],
+    "mensajeFinal": "Tener una web es invertir en tu presencia digital: una herramienta que trabaja por ti, incluso cuando tú no estás."
+  },
+  "portafolio": {
+    "titulo": "Lo que dicen nuestros clientes",
+    "testimonios": [
+      {
+        "nombre": "portafolio.testimonio1.nombre",
+        "comentario": "portafolio.testimonio1.comentario",
+        "empresa": "portafolio.testimonio1.empresa",
+        "imagen": "portafolio.testimonio1.imagen"
+      },
+      {
+        "nombre": "portafolio.testimonio2.nombre",
+        "comentario": "portafolio.testimonio2.comentario",
+        "empresa": "portafolio.testimonio2.empresa",
+        "imagen": "portafolio.testimonio2.imagen"
+      },
+      {
+        "nombre": "portafolio.testimonio3.nombre",
+        "comentario": "portafolio.testimonio3.comentario",
+        "empresa": "portafolio.testimonio3.empresa",
+        "imagen": "portafolio.testimonio3.imagen"
+      },
+      {
+        "nombre": "portafolio.testimonio4.nombre",
+        "comentario": "portafolio.testimonio4.comentario",
+        "empresa": "portafolio.testimonio4.empresa",
+        "imagen": "portafolio.testimonio4.imagen"
+      }
+    ]
+  },
+  "portafolio.testimonio1.nombre": "Diego Díaz Green",
+  "portafolio.testimonio1.comentario": "Lo recomiendo 100%. El equipo es confiable, dedicado, y muy profesional. Desde un inicio se tomaron el trabajo de comprender exactamente lo que buscaba en mi página web y plasmaron eso en funcionalidad y en estética. También aportaron buenas sugerencias y se mostraron abiertos a pedidos y modificaciones. ¡Estoy feliz con mi web!",
+  "portafolio.testimonio1.empresa": "Amplia Conciencia",
+  "portafolio.testimonio1.imagen": "/imgs/portafolio/diego.jpg",
+  "portafolio.testimonio1.url": "https://ampliaconsciencia.com",
+  "portafolio.testimonio2.nombre": "Ilona Putz",
+  "portafolio.testimonio2.comentario": "Estoy muy agradecida por el excelente trabajo en el desarrollo de mi página web. Gracias a su conocimiento y paciencia logramos conectar y ajustar todos los detalles hasta dejarla perfecta. Su apoyo fue clave para que mi proyecto quedara exactamente como lo imaginaba. ¡Totalmente recomendado!",
+  "portafolio.testimonio2.empresa": "Mexikool Tours",
+  "portafolio.testimonio2.imagen": "/imgs/portafolio/ilona.jpg",
+  "portafolio.testimonio2.url": "https://mexikooltours.com",
+  "portafolio.testimonio3.nombre": "Eugenia de Combi",
+  "portafolio.testimonio3.comentario": "El trabajo en la web del colectivo artístico al que pertenezco fue clave para tener mi material organizado y brindar un plus a mis alumnos, de una manera accesible y en un solo lugar. Un arduo y detallado empeño que requirió entusiasmo, paciencia y comunicación de calidad.",
+  "portafolio.testimonio3.empresa": "Colectivo Cultural Los de Allá",
+  "portafolio.testimonio3.imagen": "/imgs/portafolio/euge.jpg",
+  "portafolio.testimonio3.url": "https://losdealla.com",
+  "portafolio.testimonio4.nombre": "Diego Salazar",
+  "portafolio.testimonio4.comentario": "Recomiendo ampliamente a DidascaliaDev: son creativos, rápidos y muy profesionales. No solo diseña páginas, crea propuestas con sentido, investiga la competencia y te ayuda a diferenciarte. Un servicio de verdad integral y de alta calidad",
+  "portafolio.testimonio4.empresa": "Mezcal 13 deNERO",
+  "portafolio.testimonio4.imagen": "/imgs/portafolio/diegoA.jpg",
+  "portafolio.testimonio5.nombre": "Jimena Beltrán",
+  "portafolio.testimonio5.comentario": "Como psicóloga, buscaba una página web que reflejara la esencia de mi trabajo y conectara con las personas de manera auténtica. Entendieron perfectamente mi visión: investigó mi mercado, propuso ideas creativas y cuidó cada detalle con una atención excepcional. Su rapidez, profesionalismo y enfoque humano hacen que trabajar con él sea una experiencia única. Sin duda, lo recomiendo para quienes buscan un sitio web diferenciado, funcional y con propósito.",
+  "portafolio.testimonio5.empresa": "Psicoterapia y narrativa",
+  "portafolio.testimonio5.imagen": "/imgs/portafolio/jimena.jpg",
+  "servicios": {
+    "hero": {
+      "titulo": "Nuestros Servicios"
     },
-    "home": {
-        "titulo": "Didascalia Dev",
-        "subt": "Desarrollo Web",
-        "sub": "Tus ideas: una nueva historia digital",
-        "servicios": "Consigue el impulso digital que tu proyecto necesita",
-        "sersub": "Diseño y desarrollo a la medida, seguro y eficaz",
-        "buttons": "Servicios",
-        "agenda": "Agenda una reunión y empecemos con tu proyecto",
-        "button": "Contáctanos"
-    },
-    "porQueWeb": {
-        "titulo": "¿Por qué me conviene tener una web?",
-        "beneficios": [
-            {
-                "titulo": "Disponibilidad 24/7",
-                "texto": "Tu sitio web trabaja por ti todo el día, permitiendo que tus clientes te encuentren y se informen en cualquier momento."
-            },
-            {
-                "titulo": "Genera confianza",
-                "texto": "Una web transmite seriedad y credibilidad, mostrando tu proyecto o marca con una imagen sólida y profesional."
-            },
-            {
-                "titulo": "Control total",
-                "texto": "Decide cómo te ven: muestra tu estilo, tus valores y lo que te hace único."
-            },
-            {
-                "titulo": "Atrae más personas",
-                "texto": "Optimiza tu visibilidad en Google y llega a nuevos clientes potenciales."
-            },
-            {
-                "titulo": "Alcance ilimitado",
-                "texto": "Rompe las barreras geográficas: llega a nuevos clientes y mercados más allá de tu entorno local. Recibe consultas directas."
-            },
-            {
-                "titulo": "Muestra tu trabajo",
-                "texto": "Tu portafolio o servicios, siempre accesibles y presentados de forma atractiva."
-            }
-        ],
-        "mensajeFinal": "Tener una web es invertir en tu presencia digital: una herramienta que trabaja por ti, incluso cuando tú no estás."
-    },
-    "portafolio": {
-        "titulo": "Lo que dicen nuestros clientes",
-        "testimonios": [
-            {
-                "nombre": "portafolio.testimonio1.nombre",
-                "comentario": "portafolio.testimonio1.comentario",
-                "empresa": "portafolio.testimonio1.empresa",
-                "imagen": "portafolio.testimonio1.imagen"
-            },
-            {
-                "nombre": "portafolio.testimonio2.nombre",
-                "comentario": "portafolio.testimonio2.comentario",
-                "empresa": "portafolio.testimonio2.empresa",
-                "imagen": "portafolio.testimonio2.imagen"
-            },
-            {
-                "nombre": "portafolio.testimonio3.nombre",
-                "comentario": "portafolio.testimonio3.comentario",
-                "empresa": "portafolio.testimonio3.empresa",
-                "imagen": "portafolio.testimonio3.imagen"
-            },
-            {
-                "nombre": "portafolio.testimonio4.nombre",
-                "comentario": "portafolio.testimonio4.comentario",
-                "empresa": "portafolio.testimonio4.empresa",
-                "imagen": "portafolio.testimonio4.imagen"
-            }
-        ]
-    },
-    "portafolio.testimonio1.nombre": "Diego Díaz Green",
-    "portafolio.testimonio1.comentario": "Lo recomiendo 100%. El equipo es confiable, dedicado, y muy profesional. Desde un inicio se tomaron el trabajo de comprender exactamente lo que buscaba en mi página web y plasmaron eso en funcionalidad y en estética. También aportaron buenas sugerencias y se mostraron abiertos a pedidos y modificaciones. ¡Estoy feliz con mi web!",
-    "portafolio.testimonio1.empresa": "Amplia Conciencia",
-    "portafolio.testimonio1.imagen": "/imgs/portafolio/diego.jpg",
-    "portafolio.testimonio2.nombre": "Ilona Putz",
-    "portafolio.testimonio2.comentario": "Estoy muy agradecida por el excelente trabajo en el desarrollo de mi página web. Gracias a su conocimiento y paciencia logramos conectar y ajustar todos los detalles hasta dejarla perfecta. Su apoyo fue clave para que mi proyecto quedara exactamente como lo imaginaba. ¡Totalmente recomendado!",
-    "portafolio.testimonio2.empresa": "Mexikool Tours",
-    "portafolio.testimonio2.imagen": "/imgs/portafolio/ilona.jpg",
-    "portafolio.testimonio3.nombre": "Eugenia de Combi",
-    "portafolio.testimonio3.comentario": "El trabajo en la web del colectivo artístico al que pertenezco fue clave para tener mi material organizado y brindar un plus a mis alumnos, de una manera accesible y en un solo lugar. Un arduo y detallado empeño que requirió entusiasmo, paciencia y comunicación de calidad.",
-    "portafolio.testimonio3.empresa": "Colectivo Cultural Los de Allá",
-    "portafolio.testimonio3.imagen": "/imgs/portafolio/euge.jpg",
-    "portafolio.testimonio4.nombre": "Diego Salazar",
-    "portafolio.testimonio4.comentario": "Recomiendo ampliamente a DidascaliaDev: son creativos, rápidos y muy profesionales. No solo diseña páginas, crea propuestas con sentido, investiga la competencia y te ayuda a diferenciarte. Un servicio de verdad integral y de alta calidad",
-    "portafolio.testimonio4.empresa": "Mezcal 13 deNERO",
-    "portafolio.testimonio4.imagen": "/imgs/portafolio/diegoA.jpg",
-    "portafolio.testimonio5.nombre": "Jimena Beltrán",
-    "portafolio.testimonio5.comentario": "Como psicóloga, buscaba una página web que reflejara la esencia de mi trabajo y conectara con las personas de manera auténtica. Entendieron perfectamente mi visión: investigó mi mercado, propuso ideas creativas y cuidó cada detalle con una atención excepcional. Su rapidez, profesionalismo y enfoque humano hacen que trabajar con él sea una experiencia única. Sin duda, lo recomiendo para quienes buscan un sitio web diferenciado, funcional y con propósito.",
-    "portafolio.testimonio5.empresa": "Psicoterapia y narrativa",
-    "portafolio.testimonio5.imagen": "/imgs/portafolio/jimena.jpg",
-    "servicios": {
-        "hero": {
-            "titulo": "Nuestros Servicios"
+    "cards": {
+      "titulo": "Lo que podemos hacer por ti",
+      "descripcion": "Ofrecemos soluciones para potenciar tu proyecto en línea.",
+      "items": [
+        {
+          "titulo": "Desarrollo Web a Medida",
+          "descripcion": "Creamos sitios web personalizados que se adaptan a tus necesidades y objetivos comerciales."
         },
-        "cards": {
-            "titulo": "Lo que podemos hacer por ti",
-            "descripcion": "Ofrecemos soluciones para potenciar tu proyecto en línea.",
-            "items": [
-                {
-                    "titulo": "Desarrollo Web a Medida",
-                    "descripcion": "Creamos sitios web personalizados que se adaptan a tus necesidades y objetivos comerciales."
-                },
-                {
-                    "titulo": "E-commerce",
-                    "descripcion": "Implementamos tiendas online seguras y escalables, optimizadas para vender más."
-                },
-                {
-                    "titulo": "Mantenimiento Web",
-                    "descripcion": "Nos encargamos de que tu sitio siempre esté actualizado, rápido y seguro."
-                },
-                {
-                    "titulo": "Diseño de identidad",
-                    "descripcion": "Colaboramos con diseñadores que pueden ayudarte a la creación de tu logo y fortalecer la identidad de tu marca."
-                }
-            ]
+        {
+          "titulo": "E-commerce",
+          "descripcion": "Implementamos tiendas online seguras y escalables, optimizadas para vender más."
         },
-        "proceso": {
-            "titulo": "¿Cómo consigo mi web?",
-            "subtitulo": "Sigue estos sencillos pasos:",
-            "pasos": [
-                "Concertemos una cita para que me cuentes tus necesidades y planeemos lo que te conviene.",
-                "Antes del día de nuestra reunión, llena el formulario que encontrarás en el área de contacto para que nosotros también nos preparemos y aprovechemos el tiempo de encuentro. Anota todas las dudas que tengas, y las que surjan en nuestra reunión, no te quedes con las ganas de preguntar.",
-                "Después de la reunión, te haremos llegar una cotización y una hoja de acuerdo. Si estás de acuerdo, la firmas y nos la envías.",
-                "Acompañado de la firma, se requiere el 50% de anticipo para empezar a trabajar. El otro 50% se paga antes de publicar la web en la red."
-            ]
+        {
+          "titulo": "Mantenimiento Web",
+          "descripcion": "Nos encargamos de que tu sitio siempre esté actualizado, rápido y seguro."
         },
-        "faq": {
-            "titulo": "Preguntas Frecuentes",
-            "subtitulo": "Resolvemos las dudas más comunes de nuestros clientes.",
-            "preguntas": [
-                {
-                    "pregunta": "¿Qué tipos de sitios web desarrollan?",
-                    "respuesta": "Desarrollamos sitios corporativos, e-commerce, landing pages y cualquier solución web a medida según tus necesidades."
-                },
-                {
-                    "pregunta": "¿Sus webs son responsivas y optimizadas para móviles?",
-                    "respuesta": "Sí, todas nuestras webs se adaptan a dispositivos móviles y tablets, garantizando una experiencia fluida para todos los usuarios."
-                },
-                {
-                    "pregunta": "¿Es lo mismo una landing page que una web?",
-                    "respuesta": "No, una landing page no es lo mismo que una web completa. Una landing page (página de aterrizaje) es una página única y enfocada con un objetivo específico (por ejemplo, captar un email o vender un producto), mientras que una web es un conjunto de páginas interconectadas con múltiples secciones (Inicio, Servicios, Blog, Contacto, etc.)."
-                },
-                {
-                    "pregunta": "¿Qué diferencia hay entre Dominio y Hosting?",
-                    "respuesta": "La diferencia principal es la función que cumplen: el dominio es la identidad (dirección) de tu web, y el hosting es el espacio físico donde se almacenan sus archivos. Ambos son esenciales para que una página web esté disponible en Internet. El costo de los mismos está incluido en las cotizaciones."
-                },
-                {
-                    "pregunta": "¿Qué plataformas o tecnologías usan?",
-                    "respuesta": "Utilizamos React, Node.js, pero también realizamos trabajos con WordPress."
-                },
-                {
-                    "pregunta": "¿Diseñan también la identidad visual o solo la web?",
-                    "respuesta": "Colaboramos con diseñadores para crear tu logo, paleta de colores y fortalecer la identidad visual de tu marca junto al desarrollo web."
-                },
-                {
-                    "pregunta": "¿Ofrecen mantenimiento y actualizaciones después de lanzar el sitio?",
-                    "respuesta": "Sí, ofrecemos planes de mantenimiento para que tu sitio siempre esté actualizado, seguro y optimizado."
-                },
-                {
-                    "pregunta": "¿Cuánto tiempo tarda en desarrollarse un sitio web promedio?",
-                    "respuesta": "Dependiendo de la complejidad, un sitio puede tardar entre 2 y 8 semanas desde la planificación hasta el lanzamiento."
-                },
-                {
-                    "pregunta": "¿Necesito tener el contenido como texto e imágenes listas antes de empezar?",
-                    "respuesta": "Depende del proyecto, lo ideal es que tengas lo que consideras indispensable que aparezca en tu web. Entre más material puedas compartir, mejor."
-                },
-                {
-                    "pregunta": "¿Realizan sesiones fotográficas o de video para integrarlos en la web?",
-                    "respuesta": "No. Si necesitas algún tipo de sesión en específico para la web, corre por cuenta del cliente."
-                }
-            ]
+        {
+          "titulo": "Diseño de identidad",
+          "descripcion": "Colaboramos con diseñadores que pueden ayudarte a la creación de tu logo y fortalecer la identidad de tu marca."
         }
+      ]
     },
-    "contacto": {
-        "hero": "Contáctanos",
-        "titulo": "Cuéntame sobre tu proyecto",
-        "parrafo1": "Cada buen sitio web comienza con una buena conversación.",
-        "parrafo2": "Completa el formulario y cuéntanos un poco sobre lo que quieres lograr: tipo de proyecto, objetivos o ideas que ya tengas.",
-        "parrafo3": "Esto nos permite entender mejor tus necesidades y prepararnos para ofrecerte una propuesta clara, útil y hecha a tu medida.",
-        "parrafo4": "Trabajamos de forma cercana, transparente y enfocada en resultados que realmente sumen.",
-        "boton": "Llenar formulario completo",
-        "nombre": "Nombre",
-        "email": "E-mail",
-        "asunto": "Asunto",
-        "mens": "Mensaje",
-        "enviar": "Enviar"
+    "proceso": {
+      "titulo": "¿Cómo consigo mi web?",
+      "subtitulo": "Sigue estos sencillos pasos:",
+      "pasos": [
+        "Concertemos una cita para que me cuentes tus necesidades y planeemos lo que te conviene.",
+        "Antes del día de nuestra reunión, llena el formulario que encontrarás en el área de contacto para que nosotros también nos preparemos y aprovechemos el tiempo de encuentro. Anota todas las dudas que tengas, y las que surjan en nuestra reunión, no te quedes con las ganas de preguntar.",
+        "Después de la reunión, te haremos llegar una cotización y una hoja de acuerdo. Si estás de acuerdo, la firmas y nos la envías.",
+        "Acompañado de la firma, se requiere el 50% de anticipo para empezar a trabajar. El otro 50% se paga antes de publicar la web en la red."
+      ]
     },
-    "footer": {
-        "copy": "Todos los derechos reservados."
+    "faq": {
+      "titulo": "Preguntas Frecuentes",
+      "subtitulo": "Resolvemos las dudas más comunes de nuestros clientes.",
+      "preguntas": [
+        {
+          "pregunta": "¿Qué tipos de sitios web desarrollan?",
+          "respuesta": "Desarrollamos sitios corporativos, e-commerce, landing pages y cualquier solución web a medida según tus necesidades."
+        },
+        {
+          "pregunta": "¿Sus webs son responsivas y optimizadas para móviles?",
+          "respuesta": "Sí, todas nuestras webs se adaptan a dispositivos móviles y tablets, garantizando una experiencia fluida para todos los usuarios."
+        },
+        {
+          "pregunta": "¿Es lo mismo una landing page que una web?",
+          "respuesta": "No, una landing page no es lo mismo que una web completa. Una landing page (página de aterrizaje) es una página única y enfocada con un objetivo específico (por ejemplo, captar un email o vender un producto), mientras que una web es un conjunto de páginas interconectadas con múltiples secciones (Inicio, Servicios, Blog, Contacto, etc.)."
+        },
+        {
+          "pregunta": "¿Qué diferencia hay entre Dominio y Hosting?",
+          "respuesta": "La diferencia principal es la función que cumplen: el dominio es la identidad (dirección) de tu web, y el hosting es el espacio físico donde se almacenan sus archivos. Ambos son esenciales para que una página web esté disponible en Internet. El costo de los mismos está incluido en las cotizaciones."
+        },
+        {
+          "pregunta": "¿Qué plataformas o tecnologías usan?",
+          "respuesta": "Utilizamos React, Node.js, pero también realizamos trabajos con WordPress."
+        },
+        {
+          "pregunta": "¿Diseñan también la identidad visual o solo la web?",
+          "respuesta": "Colaboramos con diseñadores para crear tu logo, paleta de colores y fortalecer la identidad visual de tu marca junto al desarrollo web."
+        },
+        {
+          "pregunta": "¿Ofrecen mantenimiento y actualizaciones después de lanzar el sitio?",
+          "respuesta": "Sí, ofrecemos planes de mantenimiento para que tu sitio siempre esté actualizado, seguro y optimizado."
+        },
+        {
+          "pregunta": "¿Cuánto tiempo tarda en desarrollarse un sitio web promedio?",
+          "respuesta": "Dependiendo de la complejidad, un sitio puede tardar entre 2 y 8 semanas desde la planificación hasta el lanzamiento."
+        },
+        {
+          "pregunta": "¿Necesito tener el contenido como texto e imágenes listas antes de empezar?",
+          "respuesta": "Depende del proyecto, lo ideal es que tengas lo que consideras indispensable que aparezca en tu web. Entre más material puedas compartir, mejor."
+        },
+        {
+          "pregunta": "¿Realizan sesiones fotográficas o de video para integrarlos en la web?",
+          "respuesta": "No. Si necesitas algún tipo de sesión en específico para la web, corre por cuenta del cliente."
+        }
+      ]
     }
+  },
+  "contacto": {
+    "hero": "Contáctanos",
+    "titulo": "Cuéntame sobre tu proyecto",
+    "parrafo1": "Cada buen sitio web comienza con una buena conversación.",
+    "parrafo2": "Completa el formulario y cuéntanos un poco sobre lo que quieres lograr: tipo de proyecto, objetivos o ideas que ya tengas.",
+    "parrafo3": "Esto nos permite entender mejor tus necesidades y prepararnos para ofrecerte una propuesta clara, útil y hecha a tu medida.",
+    "parrafo4": "Trabajamos de forma cercana, transparente y enfocada en resultados que realmente sumen.",
+    "boton": "Llenar formulario completo",
+    "nombre": "Nombre",
+    "email": "E-mail",
+    "asunto": "Asunto",
+    "mens": "Mensaje",
+    "enviar": "Enviar"
+  },
+  "footer": {
+    "copy": "Todos los derechos reservados."
+  }
 }
