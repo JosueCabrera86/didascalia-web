@@ -17,7 +17,11 @@ const Portafolio = () => {
       url: "https://mexikooltours.com",
       alt: "Mexikool",
     },
-    { logo: "/imgs/portafolio/mano1.png", url: "#", alt: "Proyecto Mano" },
+    {
+      logo: "/imgs/portafolio/mano1.png",
+      url: "https://manoentonada.com",
+      alt: "Proyecto Mano",
+    },
     {
       logo: "/imgs/portafolio/rb.png",
       url: "https://ampliaconsciencia.com",
