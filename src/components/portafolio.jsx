@@ -29,6 +29,11 @@ const Portafolio = () => {
       url: "https://ampliaconsciencia.com",
       alt: "Amplia Conciencia",
     },
+       {
+      logo: "/imgs/portafolio/gye.png",
+      url: "https://gyeacosta.vercel.app/",
+      alt: "Gye Acosta",
+    },
   ];
 
   const testimonios = [
@@ -37,6 +42,7 @@ const Portafolio = () => {
     { id: 3 },
     { id: 4 },
     
+    { id: 6 }
   ];
   const marquee = {
     animate: {

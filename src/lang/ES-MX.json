@@ -93,10 +93,15 @@
   "portafolio.testimonio4.empresa": "Mezcal 13 deNERO",
   "portafolio.testimonio4.imagen": "/imgs/portafolio/diegoA.jpg",
   "portafolio.testimonio4.url": "https://13denero.com",
-  "portafolio.testimonio5.nombre": "Jimena Beltrán",
+  "portafolio.testimonio5.nombre": "Gye Acosta",
   "portafolio.testimonio5.comentario": "Como psicóloga, buscaba una página web que reflejara la esencia de mi trabajo y conectara con las personas de manera auténtica. Entendieron perfectamente mi visión: investigó mi mercado, propuso ideas creativas y cuidó cada detalle con una atención excepcional. Su rapidez, profesionalismo y enfoque humano hacen que trabajar con él sea una experiencia única. Sin duda, lo recomiendo para quienes buscan un sitio web diferenciado, funcional y con propósito.",
-  "portafolio.testimonio5.empresa": "Psicoterapia y narrativa",
-  "portafolio.testimonio5.imagen": "/imgs/portafolio/jimena.jpg",
+  "portafolio.testimonio5.empresa": "Gye Acosta",
+  "portafolio.testimonio5.imagen": "/imgs/portafolio/gyeacosta1.jpg",
+   "portafolio.testimonio6.nombre": "Josué Cabrera",
+  "portafolio.testimonio6.comentario": "Realizamos un proyecto complejo que permitió cubrir con las necesidades de nuestro Colectivo para poder compartir de mejor manera nuestras actividades y optimizar el material que compartimos en nuestros talleres.",
+  "portafolio.testimonio6.empresa": "Colectivo Cultural Los de Allá A.C.",
+  "portafolio.testimonio6.imagen": "/imgs/portafolio/josuec.jpg",
+  "portafolio.testimonio6.url": "https://losdealla.com",
   "servicios": {
     "hero": {
       "titulo": "Nuestros Servicios"

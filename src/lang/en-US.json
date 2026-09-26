@@ -88,6 +88,11 @@
   "portafolio.testimonio5.comentario": "As a psychologist, I was looking for a website that would reflect the essence of my work and connect with people authentically. They perfectly understood my vision: researched my market, proposed creative ideas, and handled every detail with exceptional care. Their speed, professionalism, and human-centered approach make working with them a unique experience. I wholeheartedly recommend them to anyone looking for a distinctive, functional, and purpose-driven website.",
   "portafolio.testimonio5.empresa": "Psychotherapy and Narrative",
   "portafolio.testimonio5.imagen": "/imgs/portafolio/jimena.jpg",
+   "portafolio.testimonio6.nombre": "Josué Cabrera",
+  "portafolio.testimonio6.comentario":"We carried out a complex project that allowed us to meet our collective's needs, enabling us to better share our activities and optimize the materials we use in our workshops.",
+  "portafolio.testimonio6.empresa": "Colectivo Cultural Los de Allá A.C.",
+  "portafolio.testimonio6.imagen": "/imgs/portafolio/josuec.jpg",
+  "portafolio.testimonio6.url": "https://losdealla.com",
   "servicios": {
     "hero": {
       "titulo": "Our Services"
